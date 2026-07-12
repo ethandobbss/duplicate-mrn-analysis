@@ -37,6 +37,23 @@ A healthcare organization operating across multiple facilities is experiencing a
 
 The deliverable is a 3-page Power BI report, built on a normalized star schema and SQL-validated dataset, that surfaces these insights for stakeholders such as HIM leadership and registration/process improvement teams.
 
+## Design Rationale
+
+This section walks through some of the thought process and decision-making behind key DAX measures and visuals in the report.
+
+This visual uses a simple count of `duplicate_id` (the fact table's primary key) on the Y-axis, with `facility` on the X-axis, filtered to the Top 5. No DAX measure was needed here. Since there are over 1,000 unique facilities in the dataset, showing all of them would make the chart unreadable, so I limited it to the top 5 for clarity.
+
+Placed directly next to the facility chart above, this card gives that visual more context. On its own, "49 duplicates at the highest facility" doesn't mean much, but paired with an average of 1 duplicate per facility, it becomes clear just how much of an outlier the top facility really is. This uses the following measure:
+
+\`\`\`dax
+Avg Duplicate MRNs per Facility = 
+AVERAGEX(
+    VALUES(fact_duplicate_events[facility]),
+    CALCULATE(COUNTROWS(fact_duplicate_events))
+)
+\`\`\`
+)
+
 ## Outcome
 
 This analysis surfaced clear opportunities to reduce duplicate MRN creation and improve resolution efficiency:
