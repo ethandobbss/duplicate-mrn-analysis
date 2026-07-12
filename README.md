@@ -78,7 +78,7 @@ AVERAGEX(
 
 ## Outcome
 
-This analysis surfaced clear opportunities to reduce duplicate MRN creation and improve resolution efficiency:
+The final product is a presentation, which you can view [here](pptx/presentation.pdf). This analysis surfaced clear opportunities to reduce duplicate MRN creation and improve resolution efficiency:
 
 - Internal Registration was the leading source of duplicate MRNs.
 - Incorrect address entry, DOB typos, and transposed names were the top contributing factors, pointing to a need for stronger input validation at the point of registration rather than downstream cleanup.
