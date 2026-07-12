@@ -45,14 +45,13 @@ This visual uses a simple count of `duplicate_id` (the fact table's primary key)
 
 Placed directly next to the facility chart above, this card gives that visual more context. On its own, "49 duplicates at the highest facility" doesn't mean much, but paired with an average of 1 duplicate per facility, it becomes clear just how much of an outlier the top facility really is. This uses the following measure:
 
-\`\`\`dax
+```dax
 Avg Duplicate MRNs per Facility = 
 AVERAGEX(
     VALUES(fact_duplicate_events[facility]),
     CALCULATE(COUNTROWS(fact_duplicate_events))
 )
-\`\`\`
-)
+```
 
 ## Outcome
 
