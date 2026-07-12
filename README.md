@@ -17,7 +17,9 @@ This E2E project simulates a duplicate MRN investigation workflow using a synthe
 
 ## Dataset Information
 
-The dataset was synthetically generated using Mockaroo, producing 19 columns covering duplicate MRN event details, contributing factors, and resolution outcomes. Since Mockaroo's free tier caps generation at 1,000 rows per download, I generated 10 separate files of 1,000 rows each and combined them into a single CSV of 10,000 records.
+The dataset was synthetically generated using Mockaroo, producing 19 columns covering duplicate MRN event details, contributing factors, and resolution outcomes. Since Mockaroo's free tier caps generation at 1,000 rows per download, I generated 10 separate files of 1,000 rows each and combined them into a single CSV of 10,000 records. To keep the data realistic and consistent, I applied constraints during generation, like tying department_id values to matching department_name values across rows.
+
+![Mockaroo Data](assets/mockaroo-data.png)
 
 I also created a separate _dax table to house all DAX measures, keeping calculations organized and separate from the underlying data tables. I prefixed the table name with an underscore so it sorts to the top of the Data pane- I found this to be especially helpful when creating the visuals.
 
