@@ -62,7 +62,7 @@ The deliverable is a 3-page Power BI report, built on a normalized star schema a
 
 This section walks through some of the thought process and decision-making behind key DAX measures and visuals in the report.
 
-This visual uses a simple count of `duplicate_id` (the fact table's primary key) on the Y-axis, with `facility` on the X-axis, filtered to the Top 5. No DAX measure was needed here. Since there are over 1,000 unique facilities in the dataset, showing all of them would make the chart unreadable, so I limited it to the top 5 for clarity.
+This visual uses a simple count of `duplicate_id` (the fact table's primary key) on the Y-axis, with `facility` on the X-axis, filtered to the Top 5. No DAX measure was needed here. Since there are 811 unique facilities in the dataset, showing all of them would make the chart unreadable, so I limited it to the top 5 for clarity.
 
 ![Report Page 2 Bottom Visuals](assets/report_page2_bottom_visuals.png)
 
