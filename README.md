@@ -21,6 +21,27 @@ The dataset was synthetically generated using Mockaroo, producing 19 columns cov
 
 ![Mockaroo Data](assets/mockaroo-data.png)
 
+After creating the dataset, I validated it with SQLite, checking row counts, missing values, and key distributions before building the star schema in Power BI.
+
+### Query 1: Duplicate Volume by Source
+
+This query confirms that Internal Registration is the leading source of duplicate MRNs, consistent with what's shown on the executive summary page.
+
+![SQL1](assets/sql1.png)
+
+### Query 2: Status Breakdown by Source
+
+This query checks whether any registration source has an unusual backlog of unresolved duplicates relative to the others.
+
+![SQL1](assets/sql2.png)
+
+### Query 3: Primary Category Breakdown
+
+This query shows that Patient Name issues account for the largest share of duplicates at 26.6%, followed by System/Interface and Date of Birth errors.
+
+![SQL1](assets/sql3.png)
+
+
 I also created a separate _dax table to house all DAX measures, keeping calculations organized and separate from the underlying data tables. I prefixed the table name with an underscore so it sorts to the top of the Data pane- I found this to be especially helpful when creating the visuals.
 
 ![Star Schema in PowerQuery](assets/mrn-schema.png)
