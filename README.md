@@ -103,4 +103,8 @@ Here are some ideas I would explore if I kept building this project further:
 You can contact me via email at [ethan-jacob@comcast.net](mailto:ethan-jacob@comcast.net) or connect with me on [LinkedIn](https://www.linkedin.com/in/ethan-dobbs).
 
 Thank you for reviewing my Duplicate MRN Analysis Project! I hope this project gives useful insight into how I approach data analysis.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
  
