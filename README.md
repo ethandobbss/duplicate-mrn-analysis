@@ -43,6 +43,8 @@ This section walks through some of the thought process and decision-making behin
 
 This visual uses a simple count of `duplicate_id` (the fact table's primary key) on the Y-axis, with `facility` on the X-axis, filtered to the Top 5. No DAX measure was needed here. Since there are over 1,000 unique facilities in the dataset, showing all of them would make the chart unreadable, so I limited it to the top 5 for clarity.
 
+![Report Page 2 Bottom Visuals](assets/report_page2_bottom_visuals.png)
+
 Placed directly next to the facility chart above, this card gives that visual more context. On its own, "49 duplicates at the highest facility" doesn't mean much, but paired with an average of 1 duplicate per facility, it becomes clear just how much of an outlier the top facility really is. This uses the following measure:
 
 ```dax
