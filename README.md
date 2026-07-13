@@ -42,7 +42,7 @@ This query shows that Patient Name issues account for the largest share of dupli
 ![SQL1](assets/sql3.png)
 
 
-I also created a separate _dax table to house all DAX measures, keeping calculations organized and separate from the underlying data tables. I prefixed the table name with an underscore so it sorts to the top of the Data pane- I found this to be especially helpful when creating the visuals.
+"After importing the CSV into Power BI, I normalized the data by splitting it into a star schema, one main fact table and two dimension tables. I then created a separate _dax table to house all DAX measures, keeping calculations organized and separate from the underlying data tables. I prefixed the table name with an underscore so it sorts to the top of the Data pane, which I found especially helpful when creating the visuals.
 
 ![Star Schema in PowerQuery](assets/mrn-schema.png)
 
